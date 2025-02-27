@@ -1,4 +1,4 @@
-DOCTYPE html>
+html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -35,7 +35,7 @@ DOCTYPE html>
   <section id="services">
     <h2>Our Services</h2>
     <ul>
-      <li>In-Home Care</li>
+      <li>in-Home Care</li>
       <li>Medical Assistance</li>
       <li>Elderly Care</li>
     </ul>
@@ -44,7 +44,7 @@ DOCTYPE html>
   <section id="contact">
     <h2>Contact Us</h2>
     <form action="submit_form.php" method="post">
-      <input type="text" name="name" placeholder="KEVIN BIKETI RN" required>
+      <input type="text" name="name" placeholder="KEVIN BIKETI RN"required>
       <input type="email" name="email" placeholder="sharuzbk11@gmail.com" required>
       <textarea name="message" placeholder="wecare while we serve" required></textarea>
       <button type="submit">Send Message</button>
