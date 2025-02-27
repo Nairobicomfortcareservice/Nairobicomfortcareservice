@@ -1,5 +1,4 @@
 
-```python
 class Caregiver:
     def __init__(self, name, specialization, contact):
         self.name = name
