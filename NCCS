@@ -3,7 +3,7 @@ html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nairobi Comfort Care Service</title>
+  <title>"Nairobi Comfort Care Service"</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,7 +19,7 @@ html>
         <li><a href="#contact">Contact Us</a></li>
       </ul>
     </nav>
-  </header>
+  </header>"NAIROBI COMFORT CARE SERVICE"
 
   <section id="home">
     <h1>Welcome to Nairobi Comfort Care Service</h1>
