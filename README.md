@@ -1,92 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nairobi Comfort Cate - Experience luxury and comfort at its best.">
+    <title>Nairobi Comfort Cate</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts for a modern feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header with navigation -->
+    <header>
+        <div class="logo">
+            <h1>Nairobi Comfort Cate</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-class Caregiver:
-    def __init__(self, name, specialization, contact):
-        self.name = name
-        self.specialization = specialization
-        self.contact = contact
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Nairobi Comfort Cate</h2>
+            <p>Your ultimate escape in Nairobi. Experience comfort like never before.</p>
+            <a href="#contact" class="cta-button">Book Your Stay</a>
+        </div>
+    </section>
 
-    def __str__(self):
-        return f"Caregiver: {self.name} | Specialization: {self.specialization} | Contact: {self.contact}"
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>At Nairobi Comfort Cate, we provide world-class accommodations with personalized services. Whether you're here for business or leisure, we ensure your experience is nothing less than extraordinary.</p>
+            </div>
+            <div class="about-image">
+                <img src="your_image_path.jpg" alt="Comfortable Room">
+            </div>
+        </div>
+    </section>
 
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-container">
+            <div class="service-item">
+                <i class="service-icon fas fa-bed"></i>
+                <h3>Luxury Rooms</h3>
+                <p>Relax in our spacious, elegantly furnished rooms designed for maximum comfort.</p>
+            </div>
+            <div class="service-item">
+                <i class="service-icon fas fa-concierge-bell"></i>
+                <h3>24/7 Concierge</h3>
+                <p>Our dedicated concierge service is available around the clock to cater to your needs.</p>
+            </div>
+            <div class="service-item">
+                <i class="service-icon fas fa-utensils"></i>
+                <h3>Fine Dining</h3>
+                <p>Indulge in world-class dining with a variety of local and international cuisines.</p>
+            </div>
+        </div>
+    </section>
 
-class HomecareService:
-    def __init__(self, service_name, description, price):
-        self.service_name = service_name
-        self.description = description
-        self.price = price
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form action="#" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
 
-    def __str__(self):
-        return f"Service: {self.service_name} | Description: {self.description} | Price: KES {self.price}"
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
 
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
 
-class NairobiComfortCareService:
-    def __init__(self):
-        self.caregivers = []
-        self.services = []
-        self.bookings = []
+            <button type="submit">Submit</button>
+        </form>
+    </section>
 
-    def add_caregiver(self, caregiver):
-        self.caregivers.append(caregiver)
-        print(f"Caregiver {caregiver.name} added successfully!")
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h1>Nairobi Comfort Cate</h1>
+            </div>
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <p>&copy; 2025 Nairobi Comfort Cate. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-    def add_service(self, service):
-        self.services.append(service)
-        print(f"Service {service.service_name} added successfully!")
-
-    def book_service(self, service_name, caregiver_name, client_name, date):
-        service = next((s for s in self.services if s.service_name == service_name), None)
-        caregiver = next((c for c in self.caregivers if c.name == caregiver_name), None)
-
-        if service and caregiver:
-            booking = {
-                "service": service,
-                "caregiver": caregiver,
-                "client_name": client_name,
-                "date": date
-            }
-            self.bookings.append(booking)
-            print(f"Service booked successfully for {client_name} on {date}!")
-        else:
-            print("Service or caregiver not found. Please check the details.")
-
-    def display_caregivers(self):
-        print("\n--- Available Caregivers ---")
-        for caregiver in self.caregivers:
-            print(caregiver)
-
-    def display_services(self):
-        print("\n--- Available Services ---")
-        for service in self.services:
-            print(service)
-
-    def display_bookings(self):
-        print("\n--- Bookings ---")
-        for booking in self.bookings:
-            print(f"Client: {booking['client_name']} | Service: {booking['service'].service_name} | Caregiver: {booking['caregiver'].name} | Date: {booking['date']}")
-
-
-# Example Usage
-if __name__ == "__main__":
-    nairobi_care = NairobiComfortCareService()
-
-    # Adding caregivers
-    caregiver1 = Caregiver("John Doe", "Elderly Care", "0712345678")
-    caregiver2 = Caregiver("Jane Smith", "Post-Surgery Care", "0723456789")
-    nairobi_care.add_caregiver(caregiver1)
-    nairobi_care.add_caregiver(caregiver2)
-
-    # Adding services
-    service1 = HomecareService("Elderly Care", "Comprehensive care for the elderly", 1500)
-    service2 = HomecareService("Post-Surgery Care", "Specialized care for post-surgery patients", 2000)
-    nairobi_care.add_service(service1)
-    nairobi_care.add_service(service2)
-
-    # Displaying caregivers and services
-    nairobi_care.display_caregivers()
-    nairobi_care.display_services()
-
-    # Booking a service
-    nairobi_care.book_service("Elderly Care", "John Doe", "Mary Johnson", "2025-03-01")
-
-    # Displaying bookings
-    nairobi_care.display_bookings()
+    <script src="script.js"></script>
+</body>
+</html>
