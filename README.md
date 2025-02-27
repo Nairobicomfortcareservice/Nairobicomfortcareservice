@@ -44,15 +44,15 @@ DOCTYPE html>
   <section id="contact">
     <h2>Contact Us</h2>
     <form action="submit_form.php" method="post">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
+      <input type="text" name="name" placeholder="KEVIN BIKETI RN" required>
+      <input type="email" name="email" placeholder="sharuzbk11@gmail.com" required>
+      <textarea name="message" placeholder="wecare while we serve" required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </section>
 
   <footer>
-    <p>&copy; 2023 Nairobi Comfort Care Service. All rights reserved.</p>
+    <p>&copy; Nairobi Comfort Care Service. All rights reserved.</p>
   </footer>
 </body>
 </html>
